@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0560xty65k0h"]
+
+[ext_resource type="Script" uid="uid://7tbw0vhclpmg" path="res://scripts/enemy_ship.gd" id="1_oflbk"]
+[ext_resource type="Texture2D" uid="uid://cgf7jg4dunx3t" path="res://assets/PNG/Enemies/enemyBlack1.png" id="2_yak45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xoug"]
+size = Vector2(89, 85)
+
+[node name="EnemyShip" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_oflbk")
+move_direction = Vector2(0, 80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_1xoug")
+
+[node name="EnemyBlack1" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_yak45")

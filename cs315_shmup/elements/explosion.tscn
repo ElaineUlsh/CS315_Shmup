@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bui78jexdvede"]
+
+[ext_resource type="Texture2D" uid="uid://c7x3ekwjajaaa" path="res://assets/PNG/Damage/playerShip1_damage1.png" id="1_0ykbj"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8iy2o"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = -248.3
+angle_max = 273.1
+initial_velocity_max = 281.61
+gravity = Vector3(0, 98, 0)
+
+[node name="Explosion" type="GPUParticles2D"]
+z_index = 2
+texture = ExtResource("1_0ykbj")
+process_material = SubResource("ParticleProcessMaterial_8iy2o")

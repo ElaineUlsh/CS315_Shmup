@@ -1,13 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy1w56geqptvk"]
+[gd_scene load_steps=7 format=3 uid="uid://dy1w56geqptvk"]
 
+[ext_resource type="Script" uid="uid://2dyuwdu3kjn0" path="res://scripts/shmup.gd" id="1_p5mca"]
 [ext_resource type="PackedScene" uid="uid://dk47y24ghfhpw" path="res://elements/bg.tscn" id="1_phj5u"]
 [ext_resource type="PackedScene" uid="uid://b767yktw02j2" path="res://elements/player_ship.tscn" id="2_21cpo"]
 [ext_resource type="PackedScene" uid="uid://djmgabnc4hjcq" path="res://elements/laser.tscn" id="4_brlw3"]
+[ext_resource type="Script" uid="uid://dafgnlmqgoi77" path="res://scripts/enemy_spawner.gd" id="4_p5mca"]
+[ext_resource type="AudioStream" uid="uid://ca626i5mlq5wp" path="res://assets/Bonus/explosion.wav" id="6_l4cba"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Shmup" type="Node2D" node_paths=PackedStringArray("text_score")]
+script = ExtResource("1_p5mca")
+text_score = NodePath("TextScore")
 
 [node name="BG" parent="." instance=ExtResource("1_phj5u")]
 
 [node name="PlayerShip" parent="." instance=ExtResource("2_21cpo")]
-position = Vector2(564, 534)
+position = Vector2(543, 532)
 bullet_element = ExtResource("4_brlw3")
+
+[node name="EnemySpawner" type="Timer" parent="."]
+wait_time = 3.5
+autostart = true
+script = ExtResource("4_p5mca")
+
+[node name="TextScore" type="Label" parent="."]
+z_index = 2
+offset_left = 1080.0
+offset_top = 28.0
+offset_right = 1120.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 36
+text = "0"
+
+[node name="SFXExplosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_l4cba")
+
+[connection signal="timeout" from="EnemySpawner" to="EnemySpawner" method="_on_timeout"]
