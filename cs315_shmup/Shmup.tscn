@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy1w56geqptvk"]
+
+[ext_resource type="PackedScene" uid="uid://dk47y24ghfhpw" path="res://elements/bg.tscn" id="1_phj5u"]
+[ext_resource type="PackedScene" uid="uid://b767yktw02j2" path="res://elements/player_ship.tscn" id="2_21cpo"]
+[ext_resource type="PackedScene" uid="uid://djmgabnc4hjcq" path="res://elements/laser.tscn" id="4_brlw3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BG" parent="." instance=ExtResource("1_phj5u")]
+
+[node name="PlayerShip" parent="." instance=ExtResource("2_21cpo")]
+position = Vector2(564, 534)
+bullet_element = ExtResource("4_brlw3")

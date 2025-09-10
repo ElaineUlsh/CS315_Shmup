@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk47y24ghfhpw"]
+
+[ext_resource type="Texture2D" uid="uid://bv5jd6rg5egeo" path="res://assets/Backgrounds/blue.png" id="1_qdkto"]
+
+[node name="BG" type="Node"]
+
+[node name="Blue" type="Sprite2D" parent="."]
+position = Vector2(383, 129)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue2" type="Sprite2D" parent="."]
+position = Vector2(634, 130)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue3" type="Sprite2D" parent="."]
+position = Vector2(885, 131)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue4" type="Sprite2D" parent="."]
+position = Vector2(128, 129)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue5" type="Sprite2D" parent="."]
+position = Vector2(1027, 131)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue" type="Sprite2D" parent="Blue5"]
+position = Vector2(-635, 249)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue2" type="Sprite2D" parent="Blue5"]
+position = Vector2(-384, 250)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue3" type="Sprite2D" parent="Blue5"]
+position = Vector2(-133, 251)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue4" type="Sprite2D" parent="Blue5"]
+position = Vector2(-893, 211.5)
+scale = Vector2(1.02344, 1.04297)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue5" type="Sprite2D" parent="Blue5"]
+position = Vector2(3, 251)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue" type="Sprite2D" parent="Blue5/Blue5"]
+position = Vector2(-642, 141)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue2" type="Sprite2D" parent="Blue5/Blue5"]
+position = Vector2(-391, 142)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue3" type="Sprite2D" parent="Blue5/Blue5"]
+position = Vector2(-140, 143)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue4" type="Sprite2D" parent="Blue5/Blue5"]
+position = Vector2(-897, 141)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue5" type="Sprite2D" parent="Blue5/Blue5"]
+position = Vector2(5, 143)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
